@@ -7,7 +7,7 @@ RUN buildDeps='build-essential gcc gfortran python3-dev' \
     && apt-get update \
     && apt-get install -y $buildDeps --no-install-recommends \
     && cat /tmp/library-dependencies.txt | egrep -v "^\s*(#|$)" | xargs apt-get install -y \
-    && CFLAGS="-I/usr/include:/usr/local/include -L/usr/lib:/usr/local/lib" \
+    && CFLAGS="-g0 -Wl,--strip-all -I/usr/include:/usr/local/include -L/usr/lib:/usr/local/lib" \
         /usr/local/bin/pip install \
         --no-cache-dir \
         --compile \
