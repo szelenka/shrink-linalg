@@ -1,10 +1,14 @@
 # scipy & numpy
 # http://scipy.github.io/devdocs/building/linux.html
-libopenblas-dev
-liblapack-dev
+openblas
+openblas-dev
+lapack
+#lapack-dev
 
 # matplotlib
 # https://matplotlib.org/users/installing.html#dependencies
-libfreetype6-dev
-libpng-dev
-pkg-config
+#freetype
+#freetype-dev
+#libpng
+#libpng-dev
+#pkg-config
